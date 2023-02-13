@@ -4,6 +4,13 @@ const refs = {
 };
 refs.input.addEventListener('input', onInputChange);
 
+if (!refs.input.value.trim()) {
+        refs.nameLabel.textContent = "Anonymous"
+    } else {
+        refs.nameLabel.textContent = refs.input.value;
+        
+}
+    
 function onInputChange(event) {
     console.log(event.currentTarget.value);
     if (!refs.input.value.trim()) {
